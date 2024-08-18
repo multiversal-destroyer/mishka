@@ -3,6 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,6 +15,15 @@ body {
   font-size: 18px;
   color: $gray;
   min-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -40,7 +50,7 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-.button {
+button {
   display: inline-block;
   background: none;
   border: none;

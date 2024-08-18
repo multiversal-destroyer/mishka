@@ -3,11 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mishka</title>
   <link rel="stylesheet" href="css/style.css">
+  <title>mishka</title>
 </head>
 
 <body>
-  <p>123kkddkk</p>
+  <header class="header">
+    <nav class="header-navigation header__navigation">
+      <ul class="header-navigation__list">
+        <li class="header-navigation__item">
+          <a class="header-navigation__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="header-navigation__item">
+          <a class="header-navigation__link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="header-navigation__logo" href="#">
+      <img class="logo" src="../img/mishka-logo.svg" alt="Логотип mishka">
+    </a>
+    <ul class="header-user__list">
+      <li class="header-user__item">
+        <button class="header-user__link header-user__link--search" type="button" aria-label="Поиск">
+          <img src="../img/search.svg" width="18" height="18" alt="">
+        </button>
+      </li>
+      <li class="header-user__item">
+        <a class="header-user__link" href="#">
+          <img src="../img/cart.svg" width="21" height="18" alt="">
+          <span class="header-user__span">Корзина: пока пуста</span>
+        </a>
+      </li>
+    </ul>
+  </header>
 </body>
 </html>
