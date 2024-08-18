@@ -1,0 +1,25 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 51px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 20px 0;
+
+  &__span {
+    font-weight: 400;
+  }
+}
+
+.main-navigation {
+
+  &__list {
+    display: flex;
+    column-gap: 61px;
+  }
+
+  &__link--second {
+    display: none;
+  }
+}
+
