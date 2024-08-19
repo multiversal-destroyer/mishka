@@ -1,0 +1,30 @@
+.featured {
+  position: relative;
+  display: flex;
+  margin: 0 50px;
+  padding: 61px calc(82px - 50px);
+  min-height: 732px;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/zigzag-featured.svg");
+    width: 100%;
+    min-height: 23px;
+    bottom: 0;
+    z-index: 2;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $green-light;
+    width: 100px;
+    text-align: center;
+    margin-right: 42px;
+    margin-top: 8px;
+  }
+}
