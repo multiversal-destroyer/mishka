@@ -64,3 +64,10 @@ button {
   cursor: pointer;
 }
 
+.button-primary {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  border: 2px solid $grey;
+}
+

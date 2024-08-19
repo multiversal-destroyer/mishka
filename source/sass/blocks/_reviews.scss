@@ -1,0 +1,86 @@
+.reviews {
+  position: relative;
+  // padding: 0 50px 0 225px;
+  min-height: 457px;
+  margin: 0 50px;
+  padding-left: 175px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/review.png");
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 457px;
+    bottom: -28px;
+    z-index: -1;
+    left: 0;
+    top: -80px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/zigzag-featured.svg");
+    width: 100%;
+    min-height: 23px;
+    bottom: -11px;
+    z-index: 2;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 53px;
+    line-height: 57px;
+    color: $black;
+    margin-bottom: 35px;
+  }
+}
+
+.review {
+
+  &__quote {
+    display: block;
+    line-height: 30px;
+    margin-bottom: 44px;
+    quotes: none;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: -21px;
+    min-width: 175px;
+    min-height: 52px;
+  }
+
+  &__cite {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+}
+
+.review-controls {
+  display: flex;
+  column-gap: 37px;
+  position: absolute;
+  right: 0;
+  bottom: 190px;
+
+  &__button--prev {
+    background-image: url("../img/arrow-left.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 26px;
+  }
+
+  &__button--next {
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 26px;
+  }
+}
+
