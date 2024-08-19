@@ -1,10 +1,14 @@
 .main-header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   margin: 0 51px;
   font-weight: 700;
   font-size: 15px;
   padding: 20px 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
 
   &__span {
     font-weight: 400;
