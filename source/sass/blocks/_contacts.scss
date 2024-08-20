@@ -1,0 +1,69 @@
+.contacts {
+  position: relative;
+  display: grid;
+  grid-template-columns: 327px 527px;
+  margin: 0 50px;
+  column-gap: 24px;
+  padding-left: 175px;
+  margin-bottom: 105px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/flag.svg");
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 81px;
+    left: 62px;
+    top: 62px;
+  }
+
+  &__container {
+    margin-top: 80px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 35px;
+    z-index: 1;
+  }
+
+  &__button {
+    min-width: 230px;
+    min-height: 52px;
+  }
+}
+
+.contacts-item {
+  display: flex;
+  column-gap: 24px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 85px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: inherit;
+  }
+
+  &__content {
+    position: relative;
+    font-style: normal;
+    line-height: 30px;
+
+    &--email::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: $green-light;
+      bottom: -5px;
+    }
+  }
+}
+

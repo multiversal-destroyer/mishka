@@ -4,6 +4,7 @@
   min-height: 457px;
   margin: 0 50px;
   padding-left: 175px;
+  margin-bottom: 81px;
 
   &::before {
     position: absolute;
@@ -30,9 +31,6 @@
   }
 
   &__title {
-    font-size: 53px;
-    line-height: 57px;
-    color: $black;
     margin-bottom: 35px;
   }
 }
@@ -49,7 +47,7 @@
   &__button {
     position: absolute;
     top: 0;
-    right: -21px;
+    right: 0;
     min-width: 175px;
     min-height: 52px;
   }
@@ -66,7 +64,7 @@
   display: flex;
   column-gap: 37px;
   position: absolute;
-  right: 0;
+  right: 19px;
   bottom: 190px;
 
   &__button--prev {
