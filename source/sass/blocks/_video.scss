@@ -1,0 +1,30 @@
+.video {
+  display: flex;
+  margin: 0 50px 105px 50px;
+}
+
+.video-sidebar {
+  padding: 60px 57px 56px 80px;
+  border: 1px solid $white-sad;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+    margin-bottom: 27px;
+    padding-top: 38px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__button {
+    min-width: 230px;
+    min-height: 52px;
+    margin-top: auto;
+  }
+}
