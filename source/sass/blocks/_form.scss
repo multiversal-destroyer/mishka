@@ -95,9 +95,22 @@
 
   &__input {
     min-height: 52px;
+    outline: none;
     border: none;
     border-bottom: 2px solid #000000;
     background-color: transparent;
+
+    &:hover {
+      border-bottom: 2px solid $green-light;
+    }
+
+    &:active {
+      border-bottom: 2px solid $green-light;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $green-light;
+    }
 
     &--width {
       width: 100%;
@@ -125,7 +138,15 @@
     min-height: 140px;
     font-size: 19px;
     background-color: transparent;
+    outline: none;
 
+    &:hover {
+      border: 2px solid $green-light;
+    }
+
+    &:focus {
+      border: 2px solid $green-light;
+    }
   }
 
   &__input[type="checkbox"] + .form-fieldset__mark--checkbox {

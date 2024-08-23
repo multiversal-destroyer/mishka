@@ -12,9 +12,21 @@
   column-gap: 40px;
 }
 
-.social__link svg {
-  fill: $black;
+.social__link {
+
+  & svg {
+    fill: $black;
+  }
+
+  &:hover svg {
+    fill: $green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
+
 
 .footer-academy {
   display: flex;
@@ -30,6 +42,32 @@
   }
 }
 
-.footer-academy__link svg {
-  fill: $green-light;
+.footer-academy__link {
+
+  & svg {
+    fill: $green-light;
+  }
+
+  &:hover svg {
+    fill: $green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.footer-logo__link {
+
+  & svg {
+    fill: $black;
+  }
+
+  &:hover svg {
+    fill: $green;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }

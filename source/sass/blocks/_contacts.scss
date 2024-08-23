@@ -56,13 +56,30 @@
     font-style: normal;
     line-height: 30px;
 
-    &--email::before {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      background-color: $green-light;
-      bottom: -5px;
+
+
+    &--email {
+
+      &:hover {
+        color: $green;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: $green-light;
+        bottom: -5px;
+      }
+
+      &:hover::before {
+        color: $green;
+      }
+
+      &:active::before {
+        opacity: 0.1;
+      }
     }
   }
 }

@@ -75,6 +75,15 @@ button {
   font-weight: 700;
   font-size: 17px;
   border: 2px solid $gray;
+
+  &:hover {
+    background-color: $gray;
+    color: $white;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 }
 
 .section-title {
@@ -83,6 +92,47 @@ button {
   color: $black;
 }
 
+.search-icon,
 .cart-icon {
   fill: $black;
+  opacity: 0.2;
 }
+
+.link-effect {
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.icon-effect {
+
+  &:hover {
+
+    & svg {
+      opacity: 1;
+      fill: $green-light;
+    }
+
+    & span {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+
+    & svg {
+      opacity: 0.3;
+      fill: $green-light;
+    }
+
+    & span {
+      opacity: 0.3;
+    }
+  }
+}
+

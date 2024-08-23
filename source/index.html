@@ -12,26 +12,28 @@
     <nav class="header-navigation header__navigation">
       <ul class="header-navigation__list">
         <li class="header-navigation__item">
-          <a class="header-navigation__link" href="catalog.html">Каталог товаров</a>
+          <a class="header-navigation__link link-effect" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="header-navigation__item">
-          <a class="header-navigation__link" href="form.html">Вязание на заказ</a>
+          <a class="header-navigation__link link-effect" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
     </nav>
-    <a class="header-navigation__logo" href="index.html">
+    <a class="header-navigation__logo link-effect" href="index.html">
       <img class="logo" src="../img/mishka-logo.svg" width="149" height="72" alt="Логотип mishka">
     </a>
     <ul class="header-user__list">
       <li class="header-user__item">
-        <button class="header-user__link header-user__link--search" type="button" aria-label="Поиск">
-          <img src="../img/search.svg" width="18" height="18" alt="">
+        <button class="header-user__link header-user__link--search icon-effect" type="button" aria-label="Поиск">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z"/>
+          </svg>
         </button>
       </li>
       <li class="header-user__item">
-        <a class="header-user__link" href="#">
+        <a class="header-user__link header-user__link--cart icon-effect" href="#">
           <svg class="cart-icon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity=".2" d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z"/>
+            <path d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z"/>
           </svg>
           <span class="header-user__span">Корзина: пока пуста</span>
         </a>
@@ -43,12 +45,12 @@
       <nav class="main-header__navigation main-navigation">
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--primary" href="#">Новые поступления</a>
-            <a class="main-navigation__link main-navigation__link--second" href="#">Каталог товаров</a>
+            <a class="main-navigation__link main-navigation__link--primary link-effect" href="#">Новые поступления</a>
+            <a class="main-navigation__link main-navigation__link--second link-effect" href="#">Каталог товаров</a>
           </li>
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--primary" href="#">Распродажа</a>
-            <a class="main-navigation__link main-navigation__link--second" href="#">Вязание на заказ</a>
+            <a class="main-navigation__link main-navigation__link--primary link-effect" href="#">Распродажа</a>
+            <a class="main-navigation__link main-navigation__link--second link-effect" href="#">Вязание на заказ</a>
           </li>
         </ul>
       </nav>
@@ -88,7 +90,7 @@
           </div>
         </dl>
         <p class="product__price">Цена: 990 руб.</p>
-        <button class="product__button button-primary" type="button">Заказать</button>
+        <button class="product__button button-primary" type="button"><span>Заказать</span></button>
         <img class="product__image" src="../img/triple-set.jpg" width="525" height="636" alt="Картинка товара" >
       </div>
     </section>
@@ -118,10 +120,10 @@
           </li>
         </ul>
         <div class="review-controls">
-          <button class="review-controls__button review-controls__button--prev" type="button" aria-label="Предыдущий отзыв"></button>
-          <button class="review-controls__button review-controls__button--next" type="button" aria-label="Следующий отзыв"></button>
+          <button class="review-controls__button review-controls__button--prev link-effect" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="review-controls__button review-controls__button--next link-effect" type="button" aria-label="Следующий отзыв"></button>
         </div>
-        <button class="review__button button-primary" type="button">Написать</button>
+        <button class="review__button button-primary" type="button"><span>Написать</span></button>
       </div>
     </section>
     <section class="contacts">
@@ -135,14 +137,16 @@
           <h3 class="contacts-item__title">адрес:</h3>
           <address class="contacts-item__content contacts-item__content--address">г. Санкт-Петербург <br> ул. Большая Конюшенная <br> д. 19/8, офис 101</address>
         </div>
-        <button class="contacts__button button-primary" type="button">Напишите нам</button>
+        <button class="contacts__button button-primary" type="button"><span>Напишите нам</span></button>
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197507!2d30.32047247624954!3d59.93871916209469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sca!4v1724110772568!5m2!1sru!2sca" width="527" height="457" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
   <footer class="footer">
     <a class="footer-logo__link" href="index.html">
-      <img class="footer-logo" src="../img/logo-footer.svg" width="101" height="34" alt="Логотип mishka">
+      <svg width="102" height="35" viewBox="0 0 102 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип mishka">
+        <path d="M19.22 21.5c-.1-2.7-.5-5.3-.5-8 0-2.2.4-4.4-.4-6.5 0-.2.1-.5.1-.7.2-1-3.3-.5-3.8.5-.3.3-.5.6-.4 1 0 .1.1.2.1.3-.7 3.2-1.6 6.3-2.6 9.4-.4 1.2-.9 2.3-1.3 3.5-.6-1.1-1.2-2.2-1.6-3.4-1.4-3.4-2.6-6.9-4.3-10.2.2-1.5-3.2-1.4-3.9 0-.8 1.7-.7 3.4-.4 5.2.3 2 .4 4 .4 6.1 0 4 .4 7.9.4 11.9-.4.4-.5.9-.1 1.4.2.2.4.4.6.5 1 .7 3.6.1 3.6-1.3 0-4.1-.3-8.2-.4-12.4v-1.2c.1.1.1.3.2.4.6 1.6 1.3 3.2 2.2 4.7.9 1.5 1.3 3.1 1.8 4.7-.2.2-.3.5-.2.7 0 .2.1.3.3.4.6.5 1.8.3 2.5 0 .3-.1.6-.3.8-.4.3-.2.9-.7.7-1.2 0-.1-.1-.2-.1-.3.5-1.3.7-2.6 1-3.9.3-1.4.8-2.8 1.3-4.1.1.6.1 1.2.2 1.9.2 2.6 0 5.1 0 7.6 0 .8.1 1.6.2 2.5.1.3.4 1.8.3 1.9-.8.5-.6 1.1.2 1.3.9.2 2.1-.1 2.8-.7 1.2-1.1.6-2.8.4-4.2-.5-2.4 0-5-.1-7.4ZM27.62 22.2c-.1-2-.8-3.9-.8-5.9 0-2.3.2-4.6-.2-6.9-.1-.7-4.1.1-3.9 1 .3 2.1.2 4.2.2 6.4 0 2 .5 3.9.7 5.9.3 2.1-.1 4.2.1 6.2.1 1 .8 2.7.1 3.6-.4.5 1.5.3 1.6.3.8-.1 1.8-.4 2.3-1 .7-.8.2-2.4.1-3.4-.3-2-.1-4.2-.2-6.2ZM43.92 18.9c-2.1-2.8-5.9-.8-8.6-1.5-1.4-.4-1.4-2.3-1.4-3.4 0-1.4-.1-2.7-.3-4.1-.1-1.1 0-2.1.7-2.9.1-.1.9-.3.8-.3.4-.1.7-.1 1.1-.1 1.5-.1 4.6.2 4 2.5-.3 1 3.6.4 3.9-.6 1.2-4.6-7.3-3.7-9.7-3.1-2.2.6-4.6 1.8-4.8 4.4-.1 1.2.3 2.4.3 3.6.1 1.4-.2 2.8.3 4.1 1.1 3 5.5 1.6 7.8 1.7 3.8.3 2.7 5.5 2.7 7.9 0 1.3 1.2 3.4.2 4.5-.6.7-2 .7-2.8.8-.8.1-2.2.3-2.7-.5-1-1.4.1-3.8-.1-5.4-.1-.9-4.1-.1-3.9 1 .3 2.6-1.4 6.1 2.4 6.6 2.4.3 5.2-.2 7.5-.9 1.2-.4 2.3-.9 3.2-1.8 1-.9.7-2.3.4-3.5-.5-3.1.9-6.5-1-9ZM61.32 18.7c-.1-3.8-.7-7.5-.7-11.3 0-2-4-1.3-4 .3 0 3.6.5 7.2.7 10.8v.2c-1.9 0-3.9.2-5.9.2.2-4.6-.6-9.2-.4-13.9 0-.6-3.9-.1-3.9 1-.2 4.5.6 8.9.5 13.4l-.3 6.4c0 1.1.2 2.2.3 3.3.1 1 .5 2.3.2 3.3-.2.8 3.6.3 3.9-.7.5-1.8-.2-4-.4-5.8-.2-1.7 0-3.5.1-5.2 2-.1 4.1-.3 6.1 0l.3 4.1c.1 1.2.2 2.3.2 3.5 0 1 .1 2.5-.2 3.5-.8 2.1 3.1 1.9 3.7.4.7-1.9.5-4.2.4-6.2-.2-2.5-.6-4.9-.6-7.3ZM78.22 23.1c-.9-2.8-2.4-5.2-3.6-7.8 1-1.9 2-3.9 2.9-5.9.8-1.8 1.4-3.8 3.1-5.1.6-.4.6-.9-.3-1-.9-.1-2.1.2-2.8.7-1.4 1.3-2.4 2.7-3.1 4.4-.9 2.1-1.9 4.1-2.9 6.1-.1.1-.1.3-.2.4-.5.3-.8.8-.6 1.3-.8 1.6-1.6 3.1-2.5 4.6-.3-5.5-1-11.1-1.2-16.6 0-1.3-4-.5-3.9 1 .2 6.9 1.2 13.7 1.3 20.6v.1c-.3.3-.2.5.1.6 0 1.8-.1 3.5-.2 5.3-.5.7.5 1.1 1.1 1.1h.1c.7 0 2.6-.3 2.7-1.4.2-2.1.3-4.2.2-6.3 1.6-1.7 2.9-3.6 4.1-5.6.8 1.5 1.5 3 2 4.6.9 2.7 2.3 5.3 3.1 8 .5 1.8 4.5.7 3.9-1-1-2.8-2.4-5.3-3.3-8.1ZM101.72 18.5c-.2-.8-1.4-.8-2.3-.8v-1c-.1-2.7-.2-5.4-.4-8-.2-2.5-1.6-3.3-4-3.2-2.4.1-5.2.5-7.5 1.4-2.6 1-4.1 2.9-4.6 5.7-.5 3 .2 6.2.4 9.2.2 3.5.1 7 .1 10.5 0 .6 3.9 0 3.9-1V23c0-.8-.1-1.6-.1-2.4 1.4-.6 3.7 0 5.1.1 1.1.1 2.2-.2 3.2-.3 0 2.3.1 4.6.2 6.9 0 1.2.5 3.5-.4 4.5-.4.5 1.5.3 1.6.3.8-.1 1.8-.4 2.3-1 .9-1.1.5-3.8.4-5.1-.1-1.9-.1-3.8-.1-5.7 1.1-.2 2.4-.9 2.2-1.8Zm-14.6-.1-.3-3.7c-.2-2.3.1-5.6 2.3-7 .6-.4 1.7-.3 2.4-.4 1-.2 2-.4 2.8.2 1.2.8.9 3.7.9 4.9 0 2 .2 4 .3 6-.6.1-1.1.1-1.7.1-2.3-.2-4.6-.6-6.7-.1ZM24.22 6.7c.5-.1 1-.2 1.5-.5l.2-.2c.5-.3 1-.8.7-1.4-.5-1.1-.4-2.2-.4-3.4 0-1-1-1.2-1.8-1.2-.7.1-2.2.6-2.2 1.5 0 1-.1 2 .1 3 0 .1-.1.2-.1.4-.1.2 0 .4.1.6v.4c.1.2.2.4.4.5.6.3 1.1.3 1.5.3Z"/>
+      </svg>
     </a>
     <ul class="footer-social social">
       <li class="social__item">

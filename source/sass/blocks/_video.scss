@@ -1,6 +1,14 @@
 .video {
   display: flex;
   margin: 0 50px 105px 50px;
+
+  &:hover .video-sidebar {
+    box-shadow: 0 6px 10px 0 $black10;
+  }
+
+  &:active .video-sidebar {
+    box-shadow: 0 3px 5px 0 $black10;
+  }
 }
 
 .video-sidebar {
