@@ -72,24 +72,44 @@
     min-height: 52px;
     align-items: center;
 
-    &--tell::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/phone.svg");
-      width: 25px;
-      height: 24px;
-      right: 8px;
-      top: 10px;
+    &--tell {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/phone.svg");
+        width: 25px;
+        height: 24px;
+        right: 8px;
+        top: 10px;
+      }
+
+      &:hover::after {
+        background-image: url("../img/phone-active.svg");
+      }
+
+      &:focus-within::after {
+        background-image: url("../img/phone-active.svg");
+      }
     }
 
-    &--email::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/mail.svg");
-      width: 32px;
-      height: 21px;
-      right: 4px;
-      top: 15px;
+    &--email {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/mail.svg");
+        width: 32px;
+        height: 21px;
+        right: 4px;
+        top: 15px;
+      }
+
+      &:hover::after {
+        background-image: url("../img/mail-active.svg");
+      }
+
+      &:focus-within::after {
+        background-image: url("../img/mail-active.svg");
+      }
     }
   }
 
@@ -111,6 +131,8 @@
     &:focus {
       border-bottom: 2px solid $green-light;
     }
+
+
 
     &--width {
       width: 100%;
@@ -139,6 +161,7 @@
     font-size: 19px;
     background-color: transparent;
     outline: none;
+    resize: none;
 
     &:hover {
       border: 2px solid $green-light;

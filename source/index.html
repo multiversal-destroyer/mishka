@@ -180,5 +180,34 @@
       </a>
     </div>
   </footer>
+
+  <!-- Модальное окно. -->
+  <div class="modal">
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <h2 class="modal-form__title">Добавить в корзину</h2>
+      <p class="modal-form__description">Выберите размер:</p>
+      <ul class="modal-form__list">
+        <li class="modal-form__item">
+          <label class="modal-form__label">
+            <span class="modal-form__span">S</span>
+            <input class="modal-form__input visually-hidden" type="radio" value="S" name="size">
+          </label>
+        </li>
+        <li class="modal-form__item">
+          <label class="modal-form__label">
+            <span class="modal-form__span">M</span>
+            <input class="modal-form__input visually-hidden" type="radio" value="M" name="size">
+          </label>
+        </li>
+        <li class="modal-form__item">
+          <label class="modal-form__label">
+            <span class="modal-form__span">L</span>
+            <input class="modal-form__input visually-hidden" type="radio" value="L" name="size">
+          </label>
+        </li>
+      </ul>
+      <button type="submit" class="modal-form__button" onclick="closeModal('.modal')"><span>Добавить</span></button>
+    </form>
+  </div>
 </body>
 </html>
