@@ -1,10 +1,20 @@
 .header {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 0 calc(51px - 35px);
-  font-weight: 700;
-  font-size: 17px;
+  justify-content: center;
+  padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 17px;
+    align-items: center;
+    padding: 0 48px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+  }
 
   &::after {
     content: "";
@@ -19,11 +29,57 @@
 
 .logo {
   position: relative;
-  left: -25px;
-  margin-top: 9px;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    left: -25px;
+  }
+
+  &-tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .header-navigation {
+  position: relative;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &__toggle {
+    position: absolute;
+    display: block;
+    right: 31px;
+    top: 32px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   &__list {
     display: flex;
@@ -31,7 +87,10 @@
 
   &__item {
     position: relative;
-    padding: 32px 35px;
+
+    @media (min-width: $desktop-width) {
+      padding: 32px 35px;
+    }
 
     &:not(:last-child)::before {
       content: "";
@@ -42,18 +101,29 @@
       right: 0;
       top: 0;
     }
+
+    &:first-child {
+      padding-left: 0;
+    }
   }
 }
 
 .header-user {
 
   &__list {
-    display: flex;
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
   }
 
   &__item {
     position: relative;
-    padding: 32px;
+
+    @media (min-width: $tablet-width) {
+      padding: 32px;
+    }
 
     &:not(:last-child)::before {
       content: "";
@@ -77,10 +147,146 @@
 
     &:last-child {
       padding: 32px 35px;
+
+      @media (min-width: $tablet-width) {
+        padding-right: 0;
+      }
     }
   }
 
-  &__span {
-    margin-left: 30px;
+  &__span--cart {
+
+    @media (min-width: $tablet-width) {
+      margin-left: 30px;
+    }
+  }
+
+  &__span--search {
+    display: none;
+  }
+}
+
+.menu-icon--close {
+  display: none;
+}
+
+.header--open {
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black;
+
+  @media (max-width: $tablet-width) {
+    background-color: $white;
+    z-index: 11;
+
+    & .menu-icon--close {
+      display: block;
+    }
+
+    & .menu-icon--open {
+      display: none;
+    }
+
+    & .header-navigation {
+      display: block;
+      order: 2;
+      width: 100%;
+    }
+
+    & .header-navigation__list {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    & .header-navigation__list:first-child::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      height: 1px;
+      background-color: $gray-light;
+      width: 100%;
+    }
+
+    & .header-navigation__item {
+      position: relative;
+      display: flex;
+    }
+
+    & .header-navigation__item span {
+      width: 190px;
+      display: inline-block;
+    }
+    & .header-user__item span {
+      width: 190px;
+      display: inline-block;
+    }
+
+    & .header-navigation__item::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      height: 1px;
+      background-color: $gray-light;
+      width: 100%;
+    }
+
+    & .header-navigation__item::before {
+      height: 0;
+    }
+
+    & .header-user__item::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      top: auto;
+      height: 1px;
+      background-color: $gray-light;
+      width: 100%;
+    }
+
+    & .header-user__item::before {
+      height: 0;
+    }
+
+    & .header-navigation__link {
+      padding: 28px 50px 26px 76px;
+    }
+
+    & .cart-icon,
+    & .search-icon {
+      position: absolute;
+      left: 32px;
+    }
+
+    & .header-user__link {
+      padding: 28px 33px 26px 76px;
+      text-align: start;
+      display: flex;
+      align-items: center;
+    }
+
+    & .header-user__list {
+      display: flex;
+      order: 3;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    & .header-user__item {
+      padding: 0;
+      display: flex;
+    }
+
+    & .header-user__span--search  {
+      display: inline;
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $black;
+    }
   }
 }
