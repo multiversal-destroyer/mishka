@@ -1,15 +1,47 @@
 .footer {
+  flex-direction: column;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 51px 50px 58px 50px;
+  padding: 22px 50px 20px 50px;
   background-color: $gray-light;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 51px 50px 58px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
 }
 
 .social {
+  position: relative;
   display: flex;
   align-items: center;
   column-gap: 40px;
+  padding: 0 59px 24px 59px;
+  margin-bottom: 22px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: $white-too-sad;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+
+    &::after {
+      height: 0;
+    }
+  }
 }
 
 .social__link {
@@ -58,7 +90,10 @@
 }
 
 .footer-logo__link {
-
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
   & svg {
     fill: $black;
   }
