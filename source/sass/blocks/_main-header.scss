@@ -1,6 +1,6 @@
 .main-header {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: space-between;
   margin: 0 51px;
   font-weight: 700;
@@ -9,6 +9,10 @@
   left: 0;
   right: 0;
   z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 
   &__span {
     font-weight: 400;
@@ -22,8 +26,26 @@
     column-gap: 61px;
   }
 
-  &__link--second {
+  &__link--primary {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  &__link--second {
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }
+
+
+
 
