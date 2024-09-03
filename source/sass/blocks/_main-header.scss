@@ -23,7 +23,14 @@
 
   &__list {
     display: flex;
-    column-gap: 61px;
+
+    @media (min-width: $tablet-width) {
+      column-gap: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      column-gap: 61px;
+    }
   }
 
   &__link--primary {
