@@ -1,85 +1,162 @@
 .about {
+  padding: 0 30px;
   margin-bottom: 168px;
-  margin-left: 225px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 52px;
+    margin-bottom: 168px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 225px;
+  }
 
   &__title {
     grid-column: 1 / -1;
-    margin-bottom: 95px;
+    font-size: 25px;
+    margin-bottom: 81px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 27px;
+      margin-bottom: 95px;
+    }
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 265px 325px;
-    column-gap: 85px;
-    row-gap: 111px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 79px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 265px 325px;
+      row-gap: 111px;
+      column-gap: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      column-gap: 85px;
+    }
+
+
   }
 
   &__text {
     position: relative;
-    font-size: 20px;
     line-height: 22px;
     font-weight: 700;
     color: $black;
+    font-size: 17px;
 
-    &:nth-child(1)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-1.svg");
-      background-repeat: no-repeat;
-      width: 33px;
-      height: 38px;
-      bottom: 62px;
-      left: 8px;
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
     }
-    &:nth-child(2)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-2.svg");
-      background-repeat: no-repeat;
-      width: 35px;
-      height: 34px;
-      bottom: 62px;
-      left: 3px;
+
+    &:nth-child(1) {
+      order: 1;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-1.svg");
+        background-repeat: no-repeat;
+        width: 33px;
+        height: 38px;
+        top: -56px;
+        left: 8px;
+      }
     }
-    &:nth-child(3)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-3.svg");
-      background-repeat: no-repeat;
-      width: 47px;
-      height: 27px;
-      bottom: 71px;
-      left: 2px;
+
+    &:nth-child(2) {
+      order: 4;
+
+      @media (min-width: $tablet-width) {
+        order: 2;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-2.svg");
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 34px;
+        top: -52px;
+        left: 3px;
+      }
     }
-    &:nth-child(4)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-4.svg");
-      background-repeat: no-repeat;
-      width: 55px;
-      height: 23px;
-      bottom: 72px;
-      left: -5px;
+
+    &:nth-child(3) {
+      order: 2;
+
+      @media (min-width: $tablet-width) {
+        order: 3;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-3.svg");
+        background-repeat: no-repeat;
+        width: 47px;
+        height: 27px;
+        top: -54px;
+        left: 2px;
+      }
     }
-    &:nth-child(5)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-5.svg");
-      background-repeat: no-repeat;
-      width: 34px;
-      height: 27px;
-      bottom: 65px;
-      left: 8px;
+
+    &:nth-child(4) {
+      order: 5;
+
+      @media (min-width: $tablet-width) {
+        order: 4;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-4.svg");
+        background-repeat: no-repeat;
+        width: 55px;
+        height: 23px;
+        top: -52px;
+        left: -5px;
+      }
     }
-    &:nth-child(6)::before {
-      position: absolute;
-      content: "";
-      background-image: url("../img/icon-6.svg");
-      background-repeat: no-repeat;
-      width: 33px;
-      height: 32px;
-      bottom: 65px;
-      left: 3px;
+
+    &:nth-child(5) {
+      order: 3;
+
+      @media (min-width: $tablet-width) {
+        order: 5;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-5.svg");
+        background-repeat: no-repeat;
+        width: 34px;
+        height: 27px;
+        top: -50px;
+        left: 8px;
+      }
+    }
+
+
+    &:nth-child(6) {
+      order: 6;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/icon-6.svg");
+        background-repeat: no-repeat;
+        width: 33px;
+        height: 32px;
+        top: -54px;
+        left: 3px;
+      }
     }
   }
 }
