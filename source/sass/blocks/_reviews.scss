@@ -1,55 +1,116 @@
 .reviews {
   position: relative;
-  // padding: 0 50px 0 225px;
   min-height: 457px;
-  margin: 0 50px;
-  padding-left: 175px;
-  margin-bottom: 81px;
+  padding: 0 30px 40px 30px;;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    margin: 0 50px;
+    margin-bottom: 84px;
+  }
 
   &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/review.png");
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 457px;
-    bottom: -28px;
-    z-index: -1;
-    left: 0;
-    top: -80px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      background-image: url("../img/review.png");
+      background-repeat: no-repeat;
+      width: 350px;
+      height: 457px;
+      bottom: -28px;
+      z-index: -1;
+      left: 0;
+      top: -80px;
+    }
   }
 
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../img/zigzag-featured.svg");
+    background-image: url("../img/zigzag-featured-mobile.svg");
     width: 100%;
-    min-height: 23px;
+    min-height: 6px;
     bottom: -11px;
     z-index: 2;
     left: 0;
+
+    @media (min-width: $tablet-width) {
+      min-height: 17px;
+      background-image: url("../img/zigzag-featured-tablet.svg");
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 23px;
+      bottom: -12px;
+      background-image: url("../img/zigzag-featured.svg");
+    }
   }
 
   &__title {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 43px;
+      margin-bottom: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 35px;
+      font-size: 53px;
+    }
   }
 }
 
 .review {
 
+  &__list {
+    margin-bottom: 33px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &__quote {
     display: block;
     line-height: 30px;
-    margin-bottom: 44px;
+    margin-bottom: 32px;
     quotes: none;
+    font-size: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 62px;
+      font-size: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 44px;
+    }
   }
 
   &__button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 175px;
     min-height: 52px;
+    min-width: 175px;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      top: -5px;
+      right: 50px;
+      position: absolute;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      right: 0;
+    }
   }
 
   &__cite {
@@ -57,28 +118,63 @@
     font-style: normal;
     font-weight: 700;
     margin-bottom: 6px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+    }
   }
 }
 
 .review-controls {
   display: flex;
-  column-gap: 37px;
-  position: absolute;
-  right: 19px;
-  bottom: 190px;
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    position: absolute;
+    bottom: 146px;
+    right: 68px;
+    column-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 190px;
+    right: 19px;
+  }
 
   &__button--prev {
     background-image: url("../img/arrow-left.svg");
     background-repeat: no-repeat;
-    width: 50px;
-    height: 26px;
+    width: 130px;
+    height: 52px;
+    background-position: center;
+    border: 1px solid $white-sad;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 26px;
+      border: none;
+    }
   }
 
   &__button--next {
     background-image: url("../img/arrow-right.svg");
     background-repeat: no-repeat;
-    width: 50px;
-    height: 26px;
+    width: 130px;
+    height: 52px;
+    background-position: center;
+    border: 1px solid $white-sad;
+    border-left: none;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 26px;
+      border: none;
+    }
   }
 }
 

@@ -1,14 +1,16 @@
 .about {
   padding: 0 30px;
-  margin-bottom: 168px;
+  margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     margin-left: 52px;
-    margin-bottom: 168px;
+    margin-bottom: 166px;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 225px;
+
   }
 
   &__title {
@@ -17,8 +19,13 @@
     margin-bottom: 81px;
 
     @media (min-width: $tablet-width) {
-      font-size: 27px;
+      font-size: 43px;
       margin-bottom: 95px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 53px;
+
     }
   }
 
