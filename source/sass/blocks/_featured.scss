@@ -4,8 +4,10 @@
   flex-direction: column;
   padding: 0 30px;
   margin-bottom: 74px;
+  margin-top: 32px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     padding: 0 calc(32px + 50px) 0 50px;
     min-height: 572px;
     margin-bottom: 59px;

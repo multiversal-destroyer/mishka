@@ -41,11 +41,14 @@ img {
 
 input::placeholder,
 textarea::placeholder {
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
   opacity: 0.6;
   font-family: "Open Sans";
 
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .visually-hidden {
