@@ -1,38 +1,104 @@
 .video {
   display: flex;
-  margin: 0 50px 105px 50px;
+  flex-direction: column;
+  border: 1px solid $white-sad;
+  margin: 0 30px 62px 30px;
 
-  &:hover .video-sidebar {
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    margin: 0 50px 65px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: auto auto;
+    grid-template-rows: 170px auto;
+    margin: 0 50px 105px 50px;
+  }
+
+  &:hover {
     box-shadow: 0 6px 10px 0 $black10;
   }
 
-  &:active .video-sidebar {
+  &:active {
     box-shadow: 0 3px 5px 0 $black10;
   }
-}
-
-.video-sidebar {
-  padding: 60px 57px 56px 80px;
-  border: 1px solid $white-sad;
-  display: flex;
-  flex-direction: column;
 
   &__title {
-    font-size: 20px;
     line-height: 24px;
     color: $black;
-    margin-bottom: 27px;
-    padding-top: 38px;
+    padding: 22px 20px 26px 91px;
+    font-size: 17px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      padding: 0 0 0 106px;
+      margin-bottom: 24px;
+      margin-top: 51px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 38px;
+      padding-left: 0;
+      margin-bottom: 27px;
+      padding: 38px 56px 0 78px;
+      margin-top: auto;
+    }
+  }
+
+  & video {
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      align-items: center;
+      margin: 0;
+    }
   }
 
   &__text {
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 14px 32px 40px 32px;
+
+    @media (min-width: $tablet-width) {
+      line-height: 30px;
+      font-size: 15px;
+      margin-bottom: 42px;
+      padding: 0 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      padding: 0px 56px 0 78px;
+    }
   }
 
   &__button {
-    min-width: 230px;
     min-height: 52px;
     margin-top: auto;
+    margin: auto 33px 0 33px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 230px;
+      margin: 0 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: auto 0 60px 16px;
+    }
   }
 }

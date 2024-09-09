@@ -1,15 +1,16 @@
 .catalog {
-  margin: 0 50px;
-  padding-top: 57px;
-  margin-bottom: 57px;
+  margin: 0 30px;
+  padding-top: 12px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     padding-top: 15px;
+    margin: 0 50px;
+    margin-bottom: 52px;
 
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 50px;
     padding-top: 57px;
     margin-bottom: 57px;
   }
@@ -20,29 +21,24 @@
   flex-wrap: wrap;
   column-gap: 51px;
   row-gap: 30px;
-  
+
   @media (min-width: $tablet-width) {
     row-gap: 52px;
-
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 30px;
-
   }
-
 }
 
 .catalog-item {
   position: relative;
-  // width: 316px;
   border: 1px solid $white-sad;
   display: flex;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -73,33 +69,33 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 24px;
-    margin: 22px 26px 6px 26px;
+    margin: 28px 26px 6px 26px;
 
     @media (min-width: $tablet-width) {
       margin: 26px 26px 6px 33px;
+      font-size: 20px;
     }
 
     @media (min-width: $desktop-width) {
-      margin: 22px 26px 6px 26px;
+      margin: 28px 26px 6px 26px;
     }
   }
 
   &__description {
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 30px;
     margin: 0 26px 12px 26px;
 
     @media (min-width: $tablet-width) {
       margin: 0 26px 12px 32px;
-
+      font-size: 15px;
     }
 
     @media (min-width: $desktop-width) {
       margin: 0 26px 12px 26px;
-
     }
   }
 
@@ -109,19 +105,15 @@
     justify-content: space-between;
     align-items: center;
     margin: auto 26px 25px 26px;
-    padding-top: 23px;
-
+    padding-top: 28px;
 
     @media (min-width: $tablet-width) {
       margin: auto 26px 27px 32px;
-
-
+      padding-top: 23px;
     }
 
     @media (min-width: $desktop-width) {
       margin: auto 26px 25px 26px;
-
-
     }
 
     &::after {
@@ -139,6 +131,11 @@
     position: relative;
     line-height: 24px;
     font-weight: 700;
+    font-size: 15px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+    }
   }
 
   &__cart {
