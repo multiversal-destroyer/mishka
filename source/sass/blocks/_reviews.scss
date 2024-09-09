@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   min-height: 457px;
-  padding: 0 30px 40px 30px;;
+  padding: 0 30px 40px 30px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -69,14 +69,24 @@
 }
 
 .review {
+  overflow: hidden;
+
 
   &__list {
+    display: flex;
+    min-width: 100%;
+    overflow: hidden;
     margin-bottom: 33px;
+    transition: 0.5s;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
     }
   }
+
+  // &__item {
+  //   min-width: 100%;
+  // }
 
   &__quote {
     display: block;

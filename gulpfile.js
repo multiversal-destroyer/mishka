@@ -44,10 +44,18 @@ const server = (done) => {
 
 exports.server = server;
 
+const scripts = () => {
+  return gulp.src("source/js/main.js")
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/main.js", gulp.series(scripts));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
