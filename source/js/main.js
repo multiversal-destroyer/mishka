@@ -7,45 +7,75 @@ toggleButton.onclick = function() {
 };
 
 // Slider
-const sliderItem = document.querySelectorAll('.review__item'),
-      sliderList = document.querySelector('.review__list'),
-      sliderButtonNext = document.querySelector('.review-controls__button--next'),
-      sliderButtonPrev = document.querySelector('.review-controls__button--prev');
+if (document.querySelector('.review')) {
 
-let sliderCount = 0,
-    sliderWidth;
+  const sliderItem = document.querySelectorAll('.review__item'),
+        sliderList = document.querySelector('.review__list'),
+        sliderButtonNext = document.querySelector('.review-controls__button--next'),
+        sliderButtonPrev = document.querySelector('.review-controls__button--prev');
 
-showSlide();
+  let sliderCount = 0,
+      sliderWidth;
 
-window.onresize = showSlide;
+  showSlide();
 
-sliderButtonNext.onclick = nextSlide;
-sliderButtonPrev.onclick = prevSlide;
+  window.onresize = showSlide;
 
-function showSlide() {
-  sliderWidth = document.querySelector('.review').offsetWidth;
-  sliderList.style.width = sliderWidth * sliderItem.length + 'px';
-  sliderItem.forEach(item => item.style.width = sliderWidth + 'px');
+  sliderButtonNext.onclick = nextSlide;
+  sliderButtonPrev.onclick = prevSlide;
 
-  rollSlider();
-}
+  function showSlide() {
+    sliderWidth = document.querySelector('.review').offsetWidth;
+    sliderList.style.width = sliderWidth * sliderItem.length + 'px';
+    sliderItem.forEach(item => item.style.width = sliderWidth + 'px');
 
-function nextSlide() {
-  sliderCount++;
-  if (sliderCount >= sliderItem.length) sliderCount = 0;
-  console.log(sliderCount);
+    rollSlider();
+  }
 
-  rollSlider();
-}
+  function nextSlide() {
+    sliderCount++;
+    if (sliderCount >= sliderItem.length) sliderCount = 0;
+    console.log(sliderCount);
 
-function prevSlide() {
-  sliderCount--;
-  if (sliderCount < 0) sliderCount = sliderItem.length - 1;
-  console.log(sliderCount);
+    rollSlider();
+  }
 
-  rollSlider();
-}
+  function prevSlide() {
+    sliderCount--;
+    if (sliderCount < 0) sliderCount = sliderItem.length - 1;
+    console.log(sliderCount);
 
-function rollSlider() {
-  sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
-}
+    rollSlider();
+  }
+
+  function rollSlider() {
+    sliderList.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+  }
+};
+
+// Modal
+if (document.querySelector('.modal')) {
+
+  const modal = document.querySelector('.modal'),
+        openModalButtons = document.querySelectorAll('.featured-card__button, .video__button');
+
+  openModalButtons.forEach(button => {
+    button.onclick = function() {
+      modal.style.visibility = 'visible';
+    };
+  });
+
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.visibility = 'hidden';
+    }
+  };
+
+  document.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27) {
+      modal.style.visibility = 'hidden';
+    }
+  });
+};
+
+
