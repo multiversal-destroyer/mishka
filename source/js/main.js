@@ -78,4 +78,15 @@ if (document.querySelector('.modal')) {
   });
 };
 
+// Video
+if (document.querySelector('.video')) {
 
+  const videoplayer = document.querySelector(".video__player");
+
+  function playVideo() {
+
+    if (videoplayer) {
+      videoplayer.style.display = "block";
+    };
+  };
+};

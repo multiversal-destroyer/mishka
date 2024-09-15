@@ -73,12 +73,30 @@
     }
   }
 
-  & video {
+  &__source {
     grid-row: 1/3;
+    position: relative;
 
     @media (min-width: $tablet-width) {
       order: -1;
     }
+  }
+
+  &__img {
+    width: 100%;
+
+    @media (min-width: $desktop-width) {
+      width: auto;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
   }
 
   &__wrapper {
@@ -128,4 +146,15 @@
       margin: auto 0 60px 16px;
     }
   }
+}
+
+.video__player {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
 }

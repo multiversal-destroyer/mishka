@@ -138,15 +138,23 @@
 
     <section class="video">
       <h2 class="video__title">Процесс производства</h2>
-      <video width="auto" controls poster="../img/video-desktop.jpg">
-        <source src="#" type="video/avi"/>
-        <source src="#" type="video/mp4"/>
-        Sorry, your browser doesn't support embedded videos.
-      </video>
+      <div class="video__source">
+        <img class="video__img" src="../img/video-desktop.jpg" alt="">
+        <img class="video__play" src="../img/play.svg" alt="" onclick="playVideo()">
+      </div>
       <div class="video__wrapper">
         <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <button class="video__button button-primary" type="submit"><span>Сделать заказ</span></button>
       </div>
+
+      <div class="video__player">
+        <video width="100%" controls autoplay>
+          <source src="../img/car.mp4" type="video/avi"/>
+          <source src="../img/car.mp4" type="video/mp4"/>
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+
     </section>
 
   </main>
